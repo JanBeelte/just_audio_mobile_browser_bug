@@ -116,8 +116,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             TextButton(
                 onPressed: () async {
-                  await widget.audioPlayer.setUrl(
-                      "https://firebasestorage.googleapis.com/v0/b/facilify-405411.appspot.com/o/shared_audio%2Fdeep-meditation-bell-hit-root-chakra-1-174455.mp3?alt=media&token=23a92a43-7367-4a18-bbb3-6654cd56a233");
+                  // await widget.audioPlayer.setUrl(
+                  // "https://firebasestorage.googleapis.com/v0/b/facilify-405411.appspot.com/o/shared_audio%2Fdeep-meditation-bell-hit-root-chakra-1-174455.mp3?alt=media&token=23a92a43-7367-4a18-bbb3-6654cd56a233");
+                  await widget.audioPlayer.setAsset(
+                      "assets/deep-meditation-bell-hit-root-chakra-1-174455.mp3");
                   widget.audioPlayer.play();
                 },
                 child: const Text('Play Audio!'))
